@@ -1,6 +1,6 @@
 # Ignore armips executable for tests
 Assembly/armips.exe
-Programs/*
+Programs/
 
 # Ignore python compiled files
 *.pyc
