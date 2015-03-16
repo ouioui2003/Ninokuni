@@ -1,5 +1,5 @@
 ;;----------------------------------------------------------------------------;;
-;;  Align the position of the textbox in the effect of items
+;;  Align the position of the textbox in the main manu
 ;;  Copyright 2014 Benito Palacios (aka pleonex)
 ;;
 ;;  Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,10 +16,10 @@
 ;;----------------------------------------------------------------------------;;
 
 .thumb
-;; Item effect
-.org 0x02117D4E
-  MOV    R1, #0x60 ; X POS -> Original 0x62
+; Selected characters name
+.org 0x020D9384
+  ADD r2, #0x16 - 6     ; X position, centered
 
-;; Slot color
-.org 0x021170DE
-  MOV    R1, #0x9E - 4 ; X POS
+; Characters name in the team
+.org 0x020D96E0
+  ADD r1, #0x14        ; X position, centered

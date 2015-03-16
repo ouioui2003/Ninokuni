@@ -1,6 +1,6 @@
 ;;----------------------------------------------------------------------------;;
-;;  Align the position of the textbox in the effect of items
-;;  Copyright 2014 Benito Palacios (aka pleonex)
+;;  Hacks for overlay 4 for arm9
+;;  Copyright 2015 Benito Palacios (aka pleonex)
 ;;
 ;;  Licensed under the Apache License, Version 2.0 (the "License");
 ;;  you may not use this file except in compliance with the License.
@@ -14,12 +14,13 @@
 ;;  See the License for the specific language governing permissions and
 ;;  limitations under the License.
 ;;----------------------------------------------------------------------------;;
+.nds
+.open overlay9_4.bin, 0x02079F80
 
-.thumb
-;; Item effect
-.org 0x02117D4E
-  MOV    R1, #0x60 ; X POS -> Original 0x62
+.relativeinclude on
+.erroronwarning on
 
-;; Slot color
-.org 0x021170DE
-  MOV    R1, #0x9E - 4 ; X POS
+.include textbox\casino_military.asm
+
+.close
+; EOF ;

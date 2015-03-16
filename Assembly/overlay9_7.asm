@@ -31,6 +31,7 @@
 .include textbox\menu_tutorials.asm
 .include textbox\menu_recipe.asm
 .include textbox\menu_equip.asm
+.include textbox\menu_trainSelect.asm
 .include keyboard\fix_familiar_length.asm
 
 .close

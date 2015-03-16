@@ -1,5 +1,5 @@
 ;;----------------------------------------------------------------------------;;
-;;  Align the position of the textbox in the effect of items
+;;  Align the position of the textbox in train select menu
 ;;  Copyright 2014 Benito Palacios (aka pleonex)
 ;;
 ;;  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,11 +15,8 @@
 ;;  limitations under the License.
 ;;----------------------------------------------------------------------------;;
 
-.thumb
-;; Item effect
-.org 0x02117D4E
-  MOV    R1, #0x60 ; X POS -> Original 0x62
+.arm
 
-;; Slot color
-.org 0x021170DE
-  MOV    R1, #0x9E - 4 ; X POS
+;; Item to give title in description
+.org 0x0209A6B4
+  MOV R2, #3        ; Y Pos, original R7 (0x00)

@@ -1,6 +1,6 @@
 ;;----------------------------------------------------------------------------;;
-;;  Align the position of the textbox in the effect of items
-;;  Copyright 2014 Benito Palacios (aka pleonex)
+;;  Align the position of the numbers in military minigame of casino.
+;;  Copyright 2015 Benito Palacios (aka pleonex)
 ;;
 ;;  Licensed under the Apache License, Version 2.0 (the "License");
 ;;  you may not use this file except in compliance with the License.
@@ -15,11 +15,7 @@
 ;;  limitations under the License.
 ;;----------------------------------------------------------------------------;;
 
-.thumb
-;; Item effect
-.org 0x02117D4E
-  MOV    R1, #0x60 ; X POS -> Original 0x62
-
-;; Slot color
-.org 0x021170DE
-  MOV    R1, #0x9E - 4 ; X POS
+.arm
+.org 0x0207E900
+  MOV r1, #0xB+19       ; X pos
+  MOV R2, #3            ; Y pos
