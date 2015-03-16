@@ -1,2 +1,3 @@
 # Ignore armips executable for tests
 Assembly/armips.exe
+Programs/*
